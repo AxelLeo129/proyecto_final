@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">ProyectoFinal</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name">GuatePreviene 2.0</string>
+    <string name="title_statistics">Estadísticas</string>
+    <string name="title_emergency">Emergencia</string>
+    <string name="title_map">Mapa</string>
+    <string name="title_news">Noticias</string>
 </resources>
