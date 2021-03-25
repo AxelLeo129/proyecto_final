@@ -24,7 +24,7 @@
 
     <fragment
         android:id="@+id/navigation_news"
-        android:name="com.example.proyectofinal.ui.map.MapFragment"
+        android:name="com.example.proyectofinal.ui.news.NewsFragment"
         android:label="@string/title_news"
         tools:layout="@layout/fragment_news" />
 
