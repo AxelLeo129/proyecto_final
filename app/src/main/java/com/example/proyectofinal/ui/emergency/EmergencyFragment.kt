@@ -51,7 +51,7 @@ class EmergencyFragment : Fragment() {
 
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val response = api.getNews()
+                val response = api.getPhones()
                 for (i in response.data) {
                     lista_telefonos.add(Phone(i.title, i.phone, i.icon))
                 }
