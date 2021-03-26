@@ -16,7 +16,9 @@ class New : Serializable {
         this.date = date
         this.imagen = imagen
         var new_description: String = description.replace("<p>", "")
-        new_description = new_description.replace("<b>", "\n")
+        new_description = new_description.replace("<br>", "\n")
+        new_description = new_description.replace("<br/>", "\n")
+        new_description = new_description.replace("</p>", "")
         this.description = new_description
     }
 }
