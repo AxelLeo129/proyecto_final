@@ -106,7 +106,6 @@ class EmergencyFragment : Fragment() {
 
             tv_titulo_imagen?.text = elementoModelo[position].titulo
             tv_descripcion_imagen?.text = elementoModelo[position].phone
-            //tv_vista_imagen?.setImageResource(elementoModelo[position].imagen!!)
             Picasso.get().load(elementoModelo[position].imagen!!).into(tv_vista_imagen)
 
             return vista!!

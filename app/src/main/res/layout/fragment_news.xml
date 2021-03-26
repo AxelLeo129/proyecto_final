@@ -13,7 +13,7 @@
         android:horizontalSpacing="2dp"
         android:numColumns="1"
         android:translationX="20sp"
-        android:translationY="-20sp"
+        android:translationY="0sp"
         android:verticalSpacing="15sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
