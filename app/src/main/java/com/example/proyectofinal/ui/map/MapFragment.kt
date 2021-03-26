@@ -37,6 +37,8 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         return root
     }
 
+
+
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
         Antut(googleMap)
