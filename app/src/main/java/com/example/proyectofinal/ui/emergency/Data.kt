@@ -1,4 +1,4 @@
-package com.example.proyectofinal.ui.news
+package com.example.proyectofinal.ui.emergency
 
 data class Data(
     val icon: String,

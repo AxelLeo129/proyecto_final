@@ -1,4 +1,4 @@
-package com.example.proyectofinal.ui.news
+package com.example.proyectofinal.ui.emergency
 
 import retrofit2.http.GET
 
