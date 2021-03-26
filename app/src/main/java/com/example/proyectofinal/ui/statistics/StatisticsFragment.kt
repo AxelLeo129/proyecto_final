@@ -26,13 +26,15 @@ class StatisticsFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        statisticsViewModel =
-                ViewModelProvider(this).get(StatisticsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_statistics, container, false)
         val textView: TextView = root.findViewById(R.id.text_home)
-        statisticsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+
+        textView.setText("Ver consola para estadisticas, pendiente implementar en view")
+        statisticsViewModel =
+                ViewModelProvider(this).get(StatisticsViewModel::class.java)
+
+
+
         return root
     }
 
@@ -46,12 +48,23 @@ class StatisticsFragment : Fragment() {
 
         CoroutineScope(Dispatchers.IO).launch {
             try {
+
                 val response = api.getStatistics()
-                Log.e("Main", "${response.country}")
+                val respuestaString: String = "Pais: ${response.country}" +
+                        "\nCasos confirmados: ${response.confirmed}" +
+                        "\n" +
+                        "Ultima actualizacion: ${response.lastUpdate}\n" +
+                        "Muertos: ${response.deaths}\n" +
+                        "Recuperados: ${response.recovered}"
+                Log.e("Main", respuestaString)
+
             } catch (e: Exception) {
-                Log.e("Main", "Error: ${e.message}")
+                Log.e("Estadisticas", "Error: ${e.message}")
+
             }
         }
+
     }
+
 
 }
